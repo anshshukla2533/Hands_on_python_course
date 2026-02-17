@@ -1,0 +1,38 @@
+weights=[];
+n=int(input("Enter the number of weights: "))
+for i in range(n):
+    w=int(input("Enter weight: "))
+    weights.append(w)
+
+very_light = []
+normal_load = []
+heavy_load = []
+overload = []
+invalid_entries = []
+
+for w in weights:
+    if w < 0:
+        invalid_entries.append(w)
+    elif w <= 5:
+        very_light.append(w)
+    elif w <= 25:
+        normal_load.append(w)
+    elif w <= 60:
+        heavy_load.append(w)
+    else:
+        overload.append(w)
+total_valid = len(weights) - len(invalid_entries)
+print(f"Total valid weights: {total_valid}")
+
+l=len("anshshukla")
+pli=l%3
+
+
+affected=len(very_light)
+print("The length of name is :",l)
+print("The pli value is:",pli)
+print("NUMBER OF AFFECTED VALUES:",affected)
+print("The invalid list is:",invalid_entries) 
+print("The very light list is:",very_light)
+print("The normal load list is :",normal_load)
+print("The Heavy load list is :",heavy_load)
